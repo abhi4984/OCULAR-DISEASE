@@ -7,7 +7,6 @@ Werkzeug==1.0.1
 numpy==1.19.5
 tensorflow==2.6.0
 keras==2.6.0
-cv2==4.5.2
 scikit-learn>=0.24
 matplotlib>=1.4.3
 pandas==1.0.5
