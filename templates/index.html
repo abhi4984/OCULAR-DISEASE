@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OCULAR EYE DISEASE DETECTION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <style>body{background-color: rgb(252,217,221);}</style>
+  <h1 class="jumbotron bg-primary"><img src="https://gravitas.ai/wp-content/uploads/2021/03/Gravitas-AI-Logo-greenpng-1.png" alt="" width="70" height="44" class="d-inline-block align-text-top">
+    GRAVITAS AI</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+  <center>
+    <!-- <img src="{{img_path}}" height="150px" width="200px"> -->
+    <br><br>
+	  <h4> Your Prediction   : <b> {{prediction}} </b></h4>
+  </center>
+	{% endif %}
+
+</div>
+
+</body>
+</html>
